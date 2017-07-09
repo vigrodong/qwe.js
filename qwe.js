@@ -1,5 +1,7 @@
 ;(function (global, callBack) {
-    callBack(global, undefined);
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = callBack() :
+        typeof define === 'function' && define.amd ? define(callBack) :
+            (global.Vuex = callBack());
 })(window || this, function (global) {
     //extend 递归功能函数
     function _extend(origin, later) {
@@ -51,4 +53,5 @@
         obj = obj || {};
         return JSON.parse(JSON.stringify(obj))
     }
+    return qwe;
 })
