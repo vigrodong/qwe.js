@@ -6,7 +6,10 @@
     //extend 递归功能函数
     function _extend(origin, later) {
         for (prop in later) {
-            if (Object.prototype.hasOwnProperty.call(origin, prop) && later[prop] instanceof Object) {
+            if (Object.prototype.hasOwnProperty.call(origin, prop)
+                && later[prop] instanceof Object
+                && !(later[prop] instanceof Array)
+                ) {
                 _extend(origin[prop], later[prop])
             }
             else {
@@ -18,7 +21,7 @@
     //是否有属性值的功能递归函数
     function _hasValue(obj, value) {
         for (prop in obj) {
-            if (obj[prop] instanceof Object) {
+            if (obj[prop] instanceof Object && !(obj[prop] instanceof Array)) {
                 _hasValue(obj[prop], value);
             }
             else {
