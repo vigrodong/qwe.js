@@ -1,2 +1,4 @@
 # qwe.js
- it can used by q just like jquery can use by $
+ it can make object operation simpler
+ contain some api
+ just like underscore and lodash
