@@ -35,8 +35,8 @@
     //返回一个新的对象此对象里面的属性已经合并
     qwe.extend = function () {
         var origin = {}
-        Array.from(arguments).forEach(function (obj) {
-            _extend(origin, obj);
+        qwe.forEach(arguments,function(obj){
+            _extend(origin,obj);
         })
         return origin;
     }
