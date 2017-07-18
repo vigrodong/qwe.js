@@ -58,7 +58,6 @@
     }
     return qwe;
     //针对于数组
-    qwe.
     qwe.max = function (array) {
         var array = array || [];
         return array.map(x = > x).sort((x, y) = > x - y)[0];
