@@ -9,7 +9,7 @@
             if (Object.prototype.hasOwnProperty.call(origin, prop)
                 && later[prop] instanceof Object
                 && !(later[prop] instanceof Array)
-                ) {
+            ) {
                 _extend(origin[prop], later[prop])
             }
             else {
@@ -35,8 +35,8 @@
     //返回一个新的对象此对象里面的属性已经合并
     qwe.extend = function () {
         var origin = {}
-        qwe.forEach(arguments,function(obj){
-            _extend(origin,obj);
+        qwe.forEach(arguments, function (obj) {
+            _extend(origin, obj);
         })
         return origin;
     }
@@ -57,4 +57,14 @@
         return JSON.parse(JSON.stringify(obj))
     }
     return qwe;
+    //针对于数组
+    qwe.
+    qwe.max = function (array) {
+        var array = array || [];
+        return array.map(x = > x).sort((x, y) = > x - y)[0];
+    }
+    qwe.min = function (array) {
+        var array = array || [];
+        return array.map(x = > x).sort((x, y) = > y - x)[0];
+    }
 })
