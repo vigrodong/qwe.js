@@ -56,7 +56,7 @@
         obj = obj || {};
         return JSON.parse(JSON.stringify(obj))
     }
-    return qwe;
+
     //针对于数组
     qwe.max = function (array) {
         var array = array || [];
@@ -66,4 +66,7 @@
         var array = array || [];
         return array.map(x = > x).sort((x, y) = > y - x)[0];
     }
+    //输出
+
+    return qwe;
 })
